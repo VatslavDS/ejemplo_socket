@@ -1,0 +1,18 @@
+<!DOCTYPE hml>
+<html lang="en">
+<head>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="mensaje"></div>
+  <label>Ingresa:</label><input type="text" id="texto" placeholder="lalala"/>
+
+
+<script>
+  var server = io.connect('http://localhost:8080');
+  server.on('message', function(data){
+  alert(data.mensaje);
+  });
+</script>
+</body>
+</html>
